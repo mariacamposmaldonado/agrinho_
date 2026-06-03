@@ -1,0 +1,152 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth; /* Efeito de rolagem suave ao clicar no menu */
+}
+
+body {
+    background-color: #faf7f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Menu de Navegação */
+header {
+    background-color: #2e4a3c; /* Verde escuro ecológico */
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f39c12; /* Cor de mel */
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Banner Principal (Hero) */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    /* Caso a imagem de exemplo mude, o fundo continuará bonito com cores */
+    background-color: #e67e22; 
+    height: 60vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 60px; /* Desconto do tamanho do menu fixo */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Container do Conteúdo */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Tópicos */
+.topic {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-left: 5px solid #f1c40f; /* Detalhe amarelo */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.topic:hover {
+    transform: translateY(-3px); /* Efeito sutil ao passar o mouse */
+}
+
+.topic h2 {
+    color: #2e4a3c;
+    margin-bottom: 15px;
+}
+
+.topic ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.topic li {
+    margin-bottom: 8px;
+}
+
+/* Estilo especial para a seção de Ameaças */
+.text-alert {
+    border-left-color: #e74c3c; /* Vermelho para alerta */
+}
+
+/* Rodapé */
+footer {
+    background-color: #2e4a3c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    header nav ul {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    header nav ul li {
+        margin: 5px 10px;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}
